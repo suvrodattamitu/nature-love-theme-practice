@@ -1,0 +1,35 @@
+$grid_width:114rem;
+$horizontal_gutter:60px;
+$vertical_gutter:80px;
+
+.row{
+    max-width:$grid_width;
+    background-color: red;
+    margin:0 auto; //left and right set auto. that fits auto in left right both same
+    &:not(:last-child){
+        margin-bottom:$vertical_gutter; // last child chara sob smy vertical gutter 80px hobe
+    }
+    .col-1-of-2{
+        width:calc((100% - #{$horizontal_gutter}) / 2);
+        background-color: orangered;
+        float:left;
+        //margin-right: $vertical_gutter;  
+        &:not(:last-child){
+            margin-right:$horizontal_gutter; // last child chara sob smy vertical gutter 80px hobe
+        }
+    }
+    
+}
+
+// @mixin grid($cols, $mgn){
+//     float: left;
+//     width: ((100% - (($cols - 1) * $mgn)) / $cols );
+//     margin-right: $mgn;
+//     margin-bottom: $mgn;
+//     &:nth-child(#{$cols}n){
+//       margin-right: 0;
+//     }
+//   }
+
+
+
